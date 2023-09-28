@@ -16,7 +16,7 @@ jobs:
   test:
     strategy: 
        matrix: 
-          platform: [windows-latest, ubuntu-18.04, ubuntu-22.04, alma-8, alma-9]
+          platform: [windows-latest, ubuntu-22.04]
     runs-on: ${{matrix.platform}}
     steps:
     - uses: actions/checkout@v3
