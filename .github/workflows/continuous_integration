@@ -1,4 +1,0 @@
-# This workflow is an example to try and see if we can get similar functionality in GitHub as we can with Jenkins. 
-# We want this action sequence to run whenever a pull request is raised, and whenever a branch is merged to master.
-
-name: Continuous Integration
