@@ -49,6 +49,8 @@ jobs:
           git add external/boost
           git commit -m "Add Boost as a submodule"
           git push
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }
 
       - name: Configure and Build with CMake
         run: |
