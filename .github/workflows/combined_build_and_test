@@ -1,0 +1,54 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Boost
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          # Add commands to download and build Boost on Ubuntu
+          # Example:
+          # wget https://dl.bintray.com/boostorg/release/1.76.0/source/boost_1_76_0.tar.gz
+          # tar xzf boost_1_76_0.tar.gz
+          # cd boost_1_76_0
+          # ./bootstrap.sh
+          # ./b2
+          # cd ..
+
+      - name: Configure and Build with CMake
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+
+      - name: Run Tests
+        run: |
+          cd build
+          ctest --output-on-failure
+
+      - name: Export Results to XML
+        run: |
+          cd build
+          ctest --output-on-failure -T Test
+          mv Testing/$(head -n 1 Testing/TAG)/Test.xml test_results.xml
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: build/test_results.xml
