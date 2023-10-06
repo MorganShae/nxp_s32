@@ -27,7 +27,7 @@ jobs:
           cd ..
 
       - name: Configure and Build with CMake
-        run: |
+        run: | 
           mkdir build
           cd build
           cmake ..
