@@ -48,9 +48,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git add external/boost
           git commit -m "Add Boost as a submodule"
-          git push
+          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
         env:
-          GH_PAT: ${{ secrets.GH_PAT }
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Configure and Build with CMake
         run: |
