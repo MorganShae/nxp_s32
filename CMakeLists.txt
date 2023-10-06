@@ -5,11 +5,11 @@ cmake_minimum_required(VERSION 3.0)
 project(MyProject VERSION 1.0)
 
 # Add subdirectories if you have them
-add_subdirectory(src)
-add_subdirectory(test)
+# add_subdirectory(src)
+# add_subdirectory(test)
 
 # Define your main executable or library target
 add_executable(my_executable main.cpp)
 
 # Link any necessary libraries
-target_link_libraries(my_executable PRIVATE Boost::boost)
+# target_link_libraries(my_executable PRIVATE Boost::boost)
