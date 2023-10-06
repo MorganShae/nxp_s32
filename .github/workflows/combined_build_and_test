@@ -19,13 +19,12 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           # Add commands to download and build Boost on Ubuntu
-          # Example:
-          # wget https://dl.bintray.com/boostorg/release/1.76.0/source/boost_1_76_0.tar.gz
-          # tar xzf boost_1_76_0.tar.gz
-          # cd boost_1_76_0
-          # ./bootstrap.sh
-          # ./b2
-          # cd ..
+          wget https://dl.bintray.com/boostorg/release/1.76.0/source/boost_1_76_0.tar.gz
+          tar xzf boost_1_76_0.tar.gz
+          cd boost_1_76_0
+          ./bootstrap.sh
+          ./b2
+          cd ..
 
       - name: Configure and Build with CMake
         run: |
