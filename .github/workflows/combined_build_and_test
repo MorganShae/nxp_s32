@@ -72,7 +72,7 @@ jobs:
           path: build/test_results.xml
 
   test:
-strategy: 
+    strategy: 
        matrix: 
           platform: [windows-latest, ubuntu-22.04]
     runs-on: ${{matrix.platform}}
