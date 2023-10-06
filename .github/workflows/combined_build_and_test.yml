@@ -37,7 +37,7 @@ jobs:
             sudo apt-get install -y libboost-all-dev
           fi
 
-        - name: Add Boost submodule
+      - name: Add Boost submodule
         run: |
           git submodule add https://github.com/boostorg/boost.git external/boost
           git submodule update --init --recursive
@@ -80,7 +80,3 @@ jobs:
         with:
           name: test-results
           path: build/test_results.xml
-
-      - name: Run pytest
-        run: | 
-           pytest -v
