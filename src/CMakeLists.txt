@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 project(MyProject)
 
-add_subdirectory(src)
-add_subdirectory(test)
-
 find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
 if(Boost_FOUND)
