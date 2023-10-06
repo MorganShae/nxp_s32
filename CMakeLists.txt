@@ -8,9 +8,6 @@ project(MyProject VERSION 1.0)
 add_subdirectory(src)
 add_subdirectory(test)
 
-# Optionally, specify any additional dependencies
-find_package(Boost REQUIRED)
-
 # Define your main executable or library target
 add_executable(my_executable main.cpp)
 
