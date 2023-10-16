@@ -27,6 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
+      - name: Add Boost submodule
+        run: |
+          git submodule add https://github.com/boostorg/boost.git external/boost
+          git submodule update --init --recursive
+      
       - name: Install Boost on Windows
         if: runner.os == 'Windows'
         run: choco install boost-vc142
@@ -34,11 +39,6 @@ jobs:
       - name: Install Boost on Ubuntu
         if: runner.os == 'Linux'
         run: sudo apt-get install -y libboost-all-dev
-
-      - name: Add Boost submodule
-        run: |
-          git submodule add https://github.com/boostorg/boost.git external/boost
-          git submodule update --init --recursive
 
       #- name: Commit submodule changes
       #  run: |
