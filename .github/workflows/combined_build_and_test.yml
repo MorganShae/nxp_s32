@@ -29,7 +29,7 @@ jobs:
 
       - name: Set up Boost
         run: |
-          if ( ${{ runner.os }} == 'Windows' ); then
+          if [ "${{ runner.os }}" == "Windows" ]; then
             # Windows Boost setup commands
             choco install boost-vc142
           else
