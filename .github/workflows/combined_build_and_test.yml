@@ -27,15 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Set up Boost
-        run: |
-          if [ "${{ runner.os }}" == "Windows" ]; then
-            # Windows Boost setup commands
-            choco install boost-vc142
-          else
-            # Ubuntu Boost setup commands
-            sudo apt-get install -y libboost-all-dev
-          fi
+      - name: Install Boost on Windows
+        if: runner.os == 'Windows'
+        run: choco install boost-vc142
+
+      - name: Install Boost on Ubuntu
+        if: runner.os == 'Linux'
+        run: sudo apt-get install -y libboost-all-dev
 
       - name: Add Boost submodule
         run: |
