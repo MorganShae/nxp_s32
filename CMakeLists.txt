@@ -9,7 +9,7 @@ add_subdirectory(src)
 add_subdirectory(test)
 
 # Define your main executable or library target
-add_executable(my_executable main.cpp)
+# add_executable(my_executable main.cpp)
 
 # Link any necessary libraries
 # target_link_libraries(my_executable PRIVATE Boost::boost)
