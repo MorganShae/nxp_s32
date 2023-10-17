@@ -50,7 +50,7 @@ configure_file(TutorialConfig.h.in TutorialConfig.h)
 add_subdirectory(MathFunctions)
 
 # add the executable
-add_executable(Tutorial tutorial.cxx)
+add_executable(Tutorial main.cpp)
 target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags)
 
 # add the binary tree to the search path for include files
