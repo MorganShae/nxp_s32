@@ -4,7 +4,7 @@ project(MyProject)
 find_package(Boost REQUIRED COMPONENTS unit_test_framework)
 
 # Assuming MyExecutable is a library
-add_library(MyExecutable main.cpp other_file.cpp)
+add_library(MyExecutable main.cpp)
 
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
