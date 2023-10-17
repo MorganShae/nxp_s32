@@ -1,5 +1,5 @@
 # add the library that runs
-add_library(MathFunctions MathFunctions.cxx)
+add_library(MathFunctions MathFunctions.cpp)
 
 # state that anybody linking to us needs to include the current source dir
 # to find MathFunctions.h, while we don't.
@@ -19,7 +19,7 @@ if(USE_MYMATH)
 
   # library that just does sqrt
   add_library(SqrtLibrary STATIC
-              mysqrt.cxx
+              mysqrt.cpp
               ${CMAKE_CURRENT_BINARY_DIR}/Table.h
               )
 
