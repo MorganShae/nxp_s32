@@ -5,6 +5,9 @@ project(Tutorial VERSION 1.0)
 
 set(CMAKE_DEBUG_POSTFIX d)
 
+# Assuming MyExecutable is a library
+add_library(MyExecutable tutorial.cxx)
+
 add_library(tutorial_compiler_flags INTERFACE)
 target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
 
