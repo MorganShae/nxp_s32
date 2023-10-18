@@ -6,7 +6,7 @@ project(Tutorial VERSION 1.0)
 set(CMAKE_DEBUG_POSTFIX d)
 
 # Assuming MyExecutable is a library
-add_library(MyExecutable tutorial.cxx)
+# add_executable(MyExecutable tutorial.cxx)
 
 add_library(tutorial_compiler_flags INTERFACE)
 target_compile_features(tutorial_compiler_flags INTERFACE cxx_std_11)
@@ -34,12 +34,12 @@ elseif(UNIX)
   set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
 endif()
 
-# add the MathFunctions library
-add_subdirectory(MathFunctions)
-
 # add the executable
 add_executable(Tutorial tutorial.cxx)
 set_target_properties(Tutorial PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
+
+# add the MathFunctions library
+add_subdirectory(MathFunctions)
 
 target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags)
 

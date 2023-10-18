@@ -1,6 +1,8 @@
 #define BOOST_TEST_MODULE MyTest
 #include <boost/test/included/unit_test.hpp>
 
+
+
 // A simple test case
 BOOST_AUTO_TEST_CASE(example_test) {
     int a = 1;
