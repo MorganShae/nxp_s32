@@ -72,7 +72,6 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           cd test
-          pip install -r requirements.txt  # Install dependencies if any
           pytest
 
       - name: Upload Test Results
