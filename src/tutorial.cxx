@@ -3,7 +3,7 @@
 #include <string>
 
 #include "MathFunctions/MathFunctions.h"
-#include "TutorialConfig.h"
+#include "TutorialConfig.h.in"
 
 int main(int argc, char* argv[])
 {
