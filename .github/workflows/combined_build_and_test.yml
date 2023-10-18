@@ -71,7 +71,7 @@ jobs:
       - name: Install Python Dependencies and Run pytest
         if: matrix.os == 'ubuntu-latest'
         run: |
-          cd path/to/your/python/tests
+          cd /your/python/tests
           pip install -r requirements.txt  # Install dependencies if any
           pytest
 
