@@ -6,7 +6,7 @@ set(SOURCES
 )
 
 # Create the SqrtLibrary target
-add_library(SqrtLibrary ${SOURCES})
+# add_library(SqrtLibrary ${SOURCES})
 
 # Optionally, you can link any dependencies here using target_link_libraries
 # For example:
@@ -34,7 +34,7 @@ if(USE_MYMATH)
 
   # library that just does sqrt
   add_library(SqrtLibrary STATIC
-              mysqrt.cpp
+              mysqrt.cxx
               ${CMAKE_CURRENT_BINARY_DIR}/Table.h
               )
 
