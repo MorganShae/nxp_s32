@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
 # Add the source files for your main program and math functions
-add_executable(MyExecutable src/tutorial.cxx src/MathFunctions/MathFunctions.cpp)
+add_executable(MyExecutable src/tutorial.cxx src/MathFunctions/MathFunctions.cxx)
 
 # Add subdirectories if you have them
 add_subdirectory(src)
