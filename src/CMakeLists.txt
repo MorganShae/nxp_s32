@@ -46,9 +46,6 @@ endif()
 # configure a header file to pass the version number only
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 
-# add the MathFunctions library
-add_subdirectory(MathFunctions)
-
 # add the executable
 add_executable(Tutorial main.cpp)
 target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags)
