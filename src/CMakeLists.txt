@@ -49,7 +49,7 @@ target_include_directories(Tutorial PUBLIC
                            )
 
 # add the install targets
-install(TARGETS Tutorial DESTINATION bin
+install(TARGETS Tutorial DESTINATION bin)
 
 # enable testing
 enable_testing()
