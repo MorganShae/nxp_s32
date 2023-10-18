@@ -1,5 +1,5 @@
 # first we add the executable that generates the table
-add_executable(MakeTable MakeTable.cpp)
+add_executable(MakeTable MakeTable.cxx)
 target_link_libraries(MakeTable PRIVATE tutorial_compiler_flags)
 
 # add the command to generate the source code
