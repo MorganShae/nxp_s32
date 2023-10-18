@@ -2,7 +2,7 @@
 
 # List of source files for SqrtLibrary
 set(SOURCES
-    sqrt.cpp
+    mysqrt.cxx
 )
 
 # Create the SqrtLibrary target
@@ -14,7 +14,7 @@ add_library(SqrtLibrary ${SOURCES})
 
 
 # add the library that runs
-add_library(MathFunctions MathFunctions.cpp)
+add_library(MathFunctions MathFunctions.cxx)
 
 # state that anybody linking to us needs to include the current source dir
 # to find MathFunctions.h, while we don't.
