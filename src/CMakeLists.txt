@@ -1,5 +1,3 @@
-configure_file(TutorialConfig.h.in)
-
 cmake_minimum_required(VERSION 3.15)
 
 # set the project name and version
@@ -36,9 +34,6 @@ elseif(UNIX)
   set(CMAKE_INSTALL_RPATH "$ORIGIN/../lib")
 endif()
 
-# configure a header file to pass the version number only
-configure_file(TutorialConfig.h.in Config.cmake.in)
-
 # add the MathFunctions library
 add_subdirectory(MathFunctions)
 
@@ -49,16 +44,12 @@ set_target_properties(Tutorial PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags)
 
 # add the binary tree to the search path for include files
-# so that we will find TutorialConfig.h.in
 target_include_directories(Tutorial PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
 
 # add the install targets
-install(TARGETS Tutorial DESTINATION bin)
-install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h.in"
-  DESTINATION include
-  )
+install(TARGETS Tutorial DESTINATION bin
 
 # enable testing
 enable_testing()
