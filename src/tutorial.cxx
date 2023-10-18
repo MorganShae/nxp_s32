@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "MathFunctions.h"
+#include "MathFunctions/MathFunctions.h"
 #include "TutorialConfig.h"
 
 int main(int argc, char* argv[])
