@@ -1,3 +1,18 @@
+# CMakeLists.txt in src/MathFunctions directory
+
+# List of source files for SqrtLibrary
+set(SOURCES
+    sqrt.cpp
+)
+
+# Create the SqrtLibrary target
+add_library(SqrtLibrary ${SOURCES})
+
+# Optionally, you can link any dependencies here using target_link_libraries
+# For example:
+# target_link_libraries(SqrtLibrary PRIVATE SomeOtherLibrary)
+
+
 # add the library that runs
 add_library(MathFunctions MathFunctions.cpp)
 
