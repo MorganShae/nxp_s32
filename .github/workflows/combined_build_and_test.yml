@@ -40,15 +40,15 @@ jobs:
         if: runner.os == 'Linux'
         run: sudo apt-get install -y libboost-all-dev
 
-      #- name: Commit submodule changes
-      #  run: |
-      #    git config --local user.email "action@github.com"
-      #    git config --local user.name "GitHub Action"
-      #    git add external/boost
-      #    git commit -m "Add Boost as a submodule"
-      #    git push https://github.com/${{ github.repository }} HEAD:${{ github.ref }}
-      #  env:
-      #    GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Commit submodule changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add external/boost
+          git commit -m "Add Boost as a submodule"
+          git push origin nxp_s32:master
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Configure and Build with CMake
         run: |
