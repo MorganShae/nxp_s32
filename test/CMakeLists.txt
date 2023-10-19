@@ -11,5 +11,6 @@ target_sources(Test1 PRIVATE src/MathFunctions/MathFunctions.cxx)
 # Link with Boost unit test framework
 target_link_libraries(Test1 PRIVATE Boost::unit_test_framework)
 
-
+# Add tests
+add_test(NAME TestFile1 COMMAND Test1)
 

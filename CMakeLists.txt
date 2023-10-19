@@ -16,3 +16,4 @@ add_subdirectory(test)
 # Link any necessary libraries
 target_link_libraries(MyExecutable PRIVATE Boost::unit_test_framework)
 
+enable_testing()
