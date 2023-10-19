@@ -40,6 +40,9 @@ jobs:
         if: runner.os == 'Linux'
         run: sudo apt-get install -y libboost-all-dev
 
+      - name: Check GH_PAT
+        run: echo ${{ secrets.GH_PAT }}
+
       - name: Commit submodule changes
         run: |
           git config --local user.email "action@github.com"
