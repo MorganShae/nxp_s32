@@ -40,13 +40,16 @@ jobs:
         if: runner.os == 'Linux'
         run: sudo apt-get install -y libboost-all-dev
 
+      # - name: Check GH_PAT
+      # run: echo ${{ secrets.GH_PAT }}
+
       #- name: Commit submodule changes
       #  run: |
       #    git config --local user.email "action@github.com"
       #    git config --local user.name "GitHub Action"
       #    git add external/boost
       #    git commit -m "Add Boost as a submodule"
-      #    git push https://github.com/${{ github.repository }} HEAD:${{ github.ref }}
+      #    git push origin main
       #  env:
       #    GH_PAT: ${{ secrets.GH_PAT }}
 
