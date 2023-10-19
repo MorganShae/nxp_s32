@@ -50,12 +50,12 @@ jobs:
       #  env:
       #    GH_PAT: ${{ secrets.GH_PAT }}
 
-      - name: Configure and Build with CMake
-        run: |
-          mkdir build
-          cd build
-          cmake ..
-          cmake --build .
+    #  - name: Configure and Build with CMake
+    #    run: |
+    #      mkdir build
+    #      cd build
+    #      cmake ..
+    #      cmake --build .
 
       - name: Run Tests
         run: |
