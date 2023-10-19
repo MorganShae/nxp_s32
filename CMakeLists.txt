@@ -13,3 +13,5 @@ add_subdirectory(test)
 
 # Link any necessary libraries
 # target_link_libraries(my_executable PRIVATE Boost::boost)
+
+find_package(Boost REQUIRED COMPONENTS unit_test_framework)
