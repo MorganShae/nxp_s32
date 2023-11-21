@@ -55,7 +55,6 @@ jobs:
 
       - name: Configure and Build with CMake
         run: |
-          mkdir build
           cd build
           cmake ..
           make -j 8
