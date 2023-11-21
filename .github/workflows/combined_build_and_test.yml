@@ -34,8 +34,9 @@ jobs:
 
       - name: Install Windows Tools
         if: runner.os == 'Windows'
-        run: choco install boost-vc142
-        run: choco install microsoft-visual-cpp-build-tools
+        run: |
+          choco install boost-msvc-14.1
+          choco install microsoft-visual-cpp-build-tools
 
       - name: Install Boost on Ubuntu
         if: runner.os == 'Linux'
