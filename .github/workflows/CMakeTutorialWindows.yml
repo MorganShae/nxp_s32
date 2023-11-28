@@ -28,11 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
 
-      - name: Example Step
-        run: |
-        cat D:/a/nxp_s32/example.txt  # Use the appropriate command for your workflow
-
-
       - name: Configure and Build with CMake
         run: |
           cmake -S . -DCMAKE_BUILD_TYPE=Debug -B build
