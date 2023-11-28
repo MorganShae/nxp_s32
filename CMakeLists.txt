@@ -1,6 +1,8 @@
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.15)
 
+set(CMAKE_SOURCE_DIR /workspaces/nxp_s32)
+
 # Define your project
 project(MyProject)
 
