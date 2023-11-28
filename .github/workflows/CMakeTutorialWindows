@@ -1,0 +1,31 @@
+name: CMake Build on Ubuntu
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main      
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+    - name: Set up CMake
+      uses: actions/setup-cmake@v2
+      with:
+        cmake-version: 3.21
+
+    - name: Configure CMake
+      run: cmake -Bbuild -H.
+
+    - name: Build
+      run: cmake --build build
+
+    - name: Run Tests
+      run: ctest --test-dir build
