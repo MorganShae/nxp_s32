@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.10)
 project(MyTests)
 
 # Add an executable for Test1
-add_executable(Test1 test_main.cpp test_file1.cpp)
+add_executable(Test1 test_main.cpp)
 
 # Add tests
 add_test(NAME TestFile1 COMMAND Test1)
