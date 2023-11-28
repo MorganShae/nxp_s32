@@ -14,19 +14,24 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up CMake
-        uses: actions/setup-cmake@v2
+        uses: jwlawson/actions-setup-cmake@v1.13
         with:
-          cmake-version: "3.21"
+          cmake-version: '3.21'
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install pytest
+
+      - name: Example Step
+        run: |
+        cat D:/a/nxp_s32/example.txt  # Use the appropriate command for your workflow
+
 
       - name: Configure and Build with CMake
         run: |
