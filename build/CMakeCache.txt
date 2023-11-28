@@ -14,32 +14,13 @@
 # EXTERNAL cache entries
 ########################
 
-//The directory containing a CMake configuration file for Boost.
-Boost_DIR:PATH=Boost_DIR-NOTFOUND
-
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=Boost_INCLUDE_DIR-NOTFOUND
-
-//Boost unit_test_framework library (debug)
-Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG:FILEPATH=Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG-NOTFOUND
-
-//Boost unit_test_framework library (release)
-Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE:FILEPATH=Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE-NOTFOUND
-
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/workspaces/nxp_s32/build/CMakeFiles/pkgRedirects
-
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_DIR
-Boost_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG
-Boost_UNIT_TEST_FRAMEWORK_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE
-Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/workspaces/nxp_s32/build
 //Major version of cmake used to create the current loaded cache
