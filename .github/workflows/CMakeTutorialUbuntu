@@ -18,11 +18,25 @@ jobs:
         with:
           cmake-version: 3.21
 
-      - name: Configure CMake
-        run: cmake -Bbuild -H.
+     - name: Set up Python 3.10
+         uses: actions/setup-python@v3
+         with:
+           python-version: "3.10"
 
-      - name: Build
-        run: cmake --build build
+     - name: Install dependencies
+             run: |
+              python -m pip install --upgrade pip
+              pip install pytest
+
+      - name: Configure and Build with CMake
+        run: |
+          cmake -S . -DCMAKE_BUILD_TYPE=Debug -B build
+          cmake --build build --parallel 16
 
       - name: Run Tests
-        run: ctest --test-dir build
+        run: |
+          ctest --test-dir build -C Debug --parallel 16 --output-junit test_results.xml --timeout 60 --output-on-failure
+
+      - name: Export Results to XML
+        run: |
+          mv build/debug/Testing/$(head -n 1 Testing/TAG)/Test.xml test_results.xml
