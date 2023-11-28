@@ -6,7 +6,6 @@ project(MyTests)
 
 # Add an executable for Test1
 add_executable(Test1 test_main.cpp test_file1.cpp)
-target_sources(Test1 PRIVATE src/MathFunctions/MathFunctions.cxx) 
 
 # Add tests
 add_test(NAME TestFile1 COMMAND Test1)
