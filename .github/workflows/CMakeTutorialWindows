@@ -1,4 +1,4 @@
-name: CMake Build on Ubuntu
+name: CMake Build on Windows
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Repository
