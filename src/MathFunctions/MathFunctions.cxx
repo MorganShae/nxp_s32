@@ -3,8 +3,14 @@
 #include "MathFunctions.h"
 #include <cmath>
 
+#ifdef MY_LIBRARY_EXPORTS
+    #define MY_LIBRARY_API __declspec(dllexport)
+#else
+    #define MY_LIBRARY_API __declspec(dllimport)
+#endif
+
 namespace mathfunctions {
-    __declspec(dllexport) double sqrt(double x) {
+    MY_LIBRARY_API double sqrt(double x) {
         return std::sqrt(x);
     }
 }
