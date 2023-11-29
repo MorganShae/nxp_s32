@@ -12,7 +12,7 @@ set_target_properties(my_library PROPERTIES
 )
 
 # Add the main executable and link with the library
-add_executable(my_project src/main.cpp)
+add_executable(my_project src/tutorial.cpp)
 target_link_libraries(my_project PRIVATE my_library)
 
 # Include the test directory
