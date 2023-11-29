@@ -10,6 +10,10 @@ set_target_properties(my_library PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 )
 
+if(WIN32)
+    target_compile_definitions(my_library PRIVATE MY_LIBRARY_EXPORTS)
+endif()
+
 # Set the output directory for the library (optional)
 set_target_properties(my_library PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
