@@ -3,16 +3,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 # Add the library and its source files
 add_library(my_library STATIC src/MathFunctions/MathFunctions.cxx)
-
-# CMakeLists.txt in the root directory
-target_include_directories(my_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
-target_include_directories(test_my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
 
 # Set the output directory for the library (optional)
 set_target_properties(my_library PROPERTIES
@@ -20,7 +12,7 @@ set_target_properties(my_library PROPERTIES
 )
 
 # Add the main executable and link with the library
-add_executable(my_project src/tutorial.cpp)
+add_executable(my_project src/main.cpp)
 target_link_libraries(my_project PRIVATE my_library)
 
 # Include the test directory
