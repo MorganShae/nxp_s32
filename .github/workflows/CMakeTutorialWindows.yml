@@ -36,7 +36,3 @@ jobs:
       - name: Run Tests
         run: |
           ctest --test-dir build -C Debug --parallel 16 --output-junit test_results.xml --timeout 60 --output-on-failure
-
-      - name: Export Results to XML
-        run: |
-          mv build/debug/Testing/$(head -n 1 Testing/TAG)/Test.xml test_results.xml
