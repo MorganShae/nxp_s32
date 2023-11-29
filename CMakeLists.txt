@@ -7,7 +7,7 @@ project(MyProject)
 add_library(mathfunctions STATIC src/MathFunctions/MathFunctions.cxx)
 
 # Add the main executable and link with the library
-add_executable(my_project src/main.cpp)
+add_executable(my_project src/tutorial.cpp)
 target_link_libraries(my_project PRIVATE mathfunctions)
 
 # Include the test directory
