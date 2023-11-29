@@ -4,7 +4,11 @@ cmake_minimum_required(VERSION 3.10)
 project(MyProject)
 
 # Add the library and its source files
-add_library(my_library STATIC src/MathFunctions/MathFunctions.cxx)
+add_library(my_library SHARED src/MathFunctions/MathFunctions.cxx)
+set_target_properties(my_library PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
 
 # Set the output directory for the library (optional)
 set_target_properties(my_library PROPERTIES
