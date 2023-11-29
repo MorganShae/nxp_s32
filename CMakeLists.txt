@@ -10,6 +10,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add the library and its source files
 add_library(my_library STATIC src/MathFunctions/MathFunctions.cxx)
 
+# CMakeLists.txt in the root directory
+target_include_directories(my_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
+target_include_directories(test_my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
+
 # Set the output directory for the library (optional)
 set_target_properties(my_library PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
