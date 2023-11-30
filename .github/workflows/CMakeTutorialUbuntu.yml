@@ -38,6 +38,6 @@ jobs:
           ls -R build
 
       - name: Run Tests
-        run: ctest --test-dir ./build --output-junit test_results.xml --timeout 60 --output-on-failure
+        run: ./build/bin/MyTest --output-junit test_results.xml --timeout 60 --output-on-failure
 
 
