@@ -37,8 +37,7 @@ jobs:
         run: |
           ls -R build
 
-
       - name: Run Tests
         run: |
-          # Run your custom test executable
-          ./build/test_my_project
+          ./build/CMakeFiles/MyTest.dir/test/test_my_project
+
