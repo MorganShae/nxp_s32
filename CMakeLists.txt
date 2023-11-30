@@ -23,15 +23,11 @@ set_target_properties(my_library PROPERTIES
 add_executable(my_project src/tutorial.cpp)
 target_link_libraries(my_project PRIVATE my_library)
 
-# CMakeLists.txt in the root directory
+# Include directories
 target_include_directories(my_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
 target_include_directories(my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
 
-# Include the test directory
-add_subdirectory(test)
-
-enable_testing()
-
 # Add your test executable and specify test cases
 add_executable(MyTest test_main.cpp)
+target_link_libraries(MyTest PRIVATE my_library)  # Link with the library
 add_test(NAME MyTest COMMAND MyTest)
