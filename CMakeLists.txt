@@ -28,6 +28,6 @@ target_include_directories(my_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/Mat
 target_include_directories(my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/MathFunctions)
 
 # Add your test executable and specify test cases
-add_executable(MyTest test_main.cpp)
+add_executable(MyTest test/test_main.cpp)
 target_link_libraries(MyTest PRIVATE my_library)  # Link with the library
 add_test(NAME MyTest COMMAND MyTest)
