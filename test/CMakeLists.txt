@@ -1,7 +1,7 @@
 # CMakeLists.txt in the 'test' directory
 
 # Add the test executable and its source files
-add_executable(test_my_project test_main.cpp test_file1.cpp)
+add_executable(test_my_project ${CMAKE_CURRENT_SOURCE_DIR}/test_main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/test_file1.cpp)
 
 # Link the test executable with the library
 target_link_libraries(test_my_project PRIVATE my_library)
