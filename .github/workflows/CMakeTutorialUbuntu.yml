@@ -1,4 +1,4 @@
-name: CMake Build on Ubuntu
+name: CMake Build and Test on Ubuntu
 
 on:
   push:
@@ -35,4 +35,10 @@ jobs:
 
       - name: Run Tests
         run: |
-          ctest --test-dir build -C Debug --parallel 16 --output-junit test_results.xml --timeout 60 --output-on-failure
+          # Run your custom test executable
+          ./build/test_my_project
+
+      - name: Run Python Tests
+        run: |
+          # Run Python tests if you have any
+          pytest
