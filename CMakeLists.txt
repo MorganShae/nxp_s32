@@ -29,3 +29,9 @@ target_include_directories(my_project PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/Ma
 
 # Include the test directory
 add_subdirectory(test)
+
+enable_testing()
+
+# Add your test executable and specify test cases
+add_executable(MyTest test_main.cpp)
+add_test(NAME MyTest COMMAND MyTest)
