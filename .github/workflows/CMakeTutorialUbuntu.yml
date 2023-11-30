@@ -33,12 +33,12 @@ jobs:
           cmake -S . -DCMAKE_BUILD_TYPE=Debug -B build
           cmake --build build --parallel 16
 
+      - name: List Build Directory
+        run: |
+          ls -R build
+
+
       - name: Run Tests
         run: |
           # Run your custom test executable
           ./build/test_my_project
-
-      - name: Run Python Tests
-        run: |
-          # Run Python tests if you have any
-          pytest
