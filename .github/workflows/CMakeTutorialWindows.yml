@@ -34,6 +34,5 @@ jobs:
           cmake --build build --parallel 16
 
       - name: Run Tests on Windows
-        if: matrix.os == 'windows-latest'
+        if: runner.os == 'Windows'
         run: .\build\bin\MyTest --output-junit test_results.xml --timeout 60 --output-on-failure
-
