@@ -39,5 +39,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          ./build/CMakeFiles/MyTest.dir/test/test_my_project
+          ./build/bin/MyTest
 
