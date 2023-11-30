@@ -19,6 +19,8 @@ set_target_properties(my_library PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
 )
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # Add the main executable and link with the library
 add_executable(my_project src/tutorial.cpp)
 target_link_libraries(my_project PRIVATE my_library)
