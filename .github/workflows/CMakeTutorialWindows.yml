@@ -33,6 +33,9 @@ jobs:
           cmake -S . -DCMAKE_BUILD_TYPE=Debug -B build
           cmake --build build --parallel 16
 
+      - name: Print Directory Contents
+        run: dir .\build\bin
+
       - name: Run Tests on Windows
         if: runner.os == 'Windows'
         run: cmd /c .\build\bin\MyTest --output-junit test_results.xml --timeout 60 --output-on-failure
